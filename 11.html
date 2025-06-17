@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .image-container { 
+    display: flex; /* Используем Flexbox для расположения изображений в ряд */ 
+    justify-content: center; /* Центрируем изображения по горизонтали */ 
+    margin-top: 10%; /* Отступ сверху для контейнера */ 
+    margin: 5% 10% 5% 10%; 
+} 
+ 
+.image-figure { 
+    text-align: center; /* Центрируем текст под изображением */ 
+    margin: 0 ; /* Отступы между фигурами */ 
+} 
+ 
+.image { 
+    width: 70%; /* Ширина изображений (можно настроить) */ 
+    height: auto; /* Сохраняем пропорции изображений */ 
+    cursor: pointer; 
+    border-radius: 50px; 
+} 
+.image:hover { 
+    opacity: 80%; 
+} 
+figcaption { 
+    margin-top: 15px; /* Отступ между изображением и текстом */ 
+    font-size: 2vw; /* Размер шрифта для текста */ 
+    color: #333; /* Цвет текста (можно настроить) */ 
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+    </style>
+</head>
+<body>
+    <div class="zhelt">
+     
+        <button class="toggle-button" onclick="toggleSidebar()">Фильтры</button>
+        <div class="sidebar" id="sidebar">
+            <button class="close-button" onclick="toggleSidebar()">✖</button>
+            <h2>Фильтры</h2>
+            <h3>Размер</h3>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Короткие</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Средние</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Длинные</p>
+            </div>
+            <h3>Тематика</h3>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Развлекательные</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Диагностические</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Учебные</p>
+            </div>
+            <input type="submit" value="Применить">
+        </div> 
+          <h1>Рекомендованные вам тестики</h1>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+<div class="image-container"> 
+    <figure class="image-figure"> 
+        <img src="./Group 6.png" alt="Image 1" class="image"> 
+        <figcaption>Кто ты из смешариков?</figcaption> 
+    </figure> 
+    <figure class="image-figure"> 
+        <img src="./картинки/салат.jpg" alt="Image 2" class="image"> 
+        <figcaption>Какой ты салатик?</figcaption> 
+    </figure> 
+    <figure class="image-figure"> 
+        <img src="./картинки/ева.jpg" alt="Image 3" class="image"> 
+        <figcaption>Какая ты цитата из Евангелиона?</figcaption> 
+    </figure> 
+</div> 
+<div class="image-container"> 
+    <figure class="image-figure"> 
+        <img src="./картинки/береза.jpg" alt="Image 1" class="image"> 
+        <figcaption>Твой вайб сезона</figcaption> 
+    </figure> 
+    <figure class="image-figure"> 
+        <img src="./картинки/миньон.jpg" alt="Image 2" class="image"> 
+        <figcaption>Какой ты миньон?</figcaption> 
+    </figure> 
+    <figure class="image-figure"> 
+        <img src="./картинки/всадники.jpg" alt="Image 3" class="image"> 
+        <figcaption>Какой ты всадник апокалипсиса?</figcaption> 
+    </figure> 
+</div>
+
+
+</body>
+</html>

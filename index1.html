@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начальная страница</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="вазиконка.jpg">
+</head>
+<body>
+    <div class="autor">
+        <h1>Авторизация</h1>
+        <img class="qqq" src="User Check.png">
+    </div>
+    <div class="hui">
+        <img style="width: 20% ;" src="Generic avatar.png">
+    </div>
+    
+
+<div class="nomer">
+    <input placeholder="Эл.почта" 
+    type="email"
+     id="inputField1"
+    required maxlength="40"
+     pattern="^\S+@\S+\.\S+$" >
+</div>
+
+<div class="nomer">
+    <input 
+      placeholder="Фамилия Имя" 
+      type="text" 
+      id="inputField2"
+      required 
+      minlength="2" 
+      maxlength="50"
+      pattern="[А-Яа-яЁёA-Za-z]+\s[А-Яа-яЁёA-Za-z]+" 
+      title="Имя и фамилия должны содержать только буквы и пробел."
+    >
+  </div>
+        
+    <div class="nomer">
+        <input 
+          placeholder="Пароль" 
+          type="password" 
+          id="inputField3"
+          required 
+          minlength="8" 
+          maxlength="50"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,50}$"
+          title="Пароль должен содержать хотя бы одну заглавную букву, одну строчную букву, одну цифру и быть от 8 до 50 символов."
+        >
+      </div>
+
+
+<p>Укажите ваш возраст: </p>
+<form style="margin-bottom: 50px;">
+    <select name="selection">
+        <OPTION VALUE="[До 16 лет]">До 16 лет
+        <OPTION VALUE="[16-17 лет]">16-17 лет
+        <OPTION VALUE="[От 18 лет]">От 18 лет
+    </select>
+</form>
+
+
+<a class="ttt"><img style="width: 100px; height: 40px;"src="qqqq.png"></a>
+
+<script>
+    const button = document.querySelector('.ttt');
+  
+    // Получаем все поля
+    const emailInput = document.getElementById('inputField1');
+    const nameInput = document.getElementById('inputField2');
+    const passwordInput = document.getElementById('inputField3');
+    const ageSelect = document.querySelector('select[name="selection"]');
+  
+    button.addEventListener("click", function (e) {
+      e.preventDefault(); // Отменяем стандартное поведение ссылки
+  
+      // Последовательная проверка полей
+      const fields = [
+        { input: emailInput, emptyMessage: "Пожалуйста, введите почту", invalidMessage: "Почта введена неправильно" },
+        { input: nameInput, emptyMessage: "Пожалуйста, введите имя и фамилию", invalidMessage: "Имя и фамилия введены неправильно" },
+        { input: passwordInput, emptyMessage: "Пожалуйста, введите пароль", invalidMessage: "Пароль введён неправильно" },
+        { input: ageSelect, emptyMessage: "Пожалуйста, выберите возраст", invalidMessage: "Выберите возраст из списка" }
+      ];
+  
+      for (const field of fields) {
+        const value = field.input.value?.toString().trim();
+        const isValid = field.input.checkValidity();
+  
+        // Проверяем на пустоту
+        if (!value) {
+          alert(field.emptyMessage);
+          field.input.reportValidity();
+          return;
+        }
+  
+        // Проверяем на валидность
+        if (!isValid) {
+          alert(field.invalidMessage);
+          field.input.reportValidity();
+          return;
+        }
+      }
+  
+      // Все поля корректны — переходим на index3.html
+      alert("Ok");
+      window.location.href = "index3.html";
+    });
+  </script>
+
+<style>
+    .highlight { 
+        background-color: rgb(255, 255, 255); 
+    }
+</style>
+
+<div class="obhs">
+    <div class="eshe">
+    <p>Ещё нет аккаунта?</p>
+    <a href="">Создать</a>
+</div>
+<div class="zab">
+<p>Забыли пароль?</p>
+<a href="">Восстановить</a>
+</div>
+</div>
+    <a class="eee" href="index3.html">Продолжить без авторизации</a>
+    <script>
+        document.querySelector(".eee").addEventListener("click", (e) => {
+            alert("Без авторизации вам буду недоступны некоторые функции. Продолжить с ограниченными возможностями?")
+        }) 
+    </script>
+
+</body>
+</html>

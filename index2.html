@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендованные</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="вазиконка.jpg">
+</head>
+<body>
+    <div class="zhelt">
+     
+        <button class="toggle-button" onclick="toggleSidebar()">Фильтры</button>
+        <div class="sidebar" id="sidebar">
+            <button class="close-button" onclick="toggleSidebar()">✖</button>
+            <h2>Фильтры</h2>
+            <h3>Размер</h3>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Короткие</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Средние</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Длинные</p>
+            </div>
+            <h3>Тематика</h3>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Развлекательные</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Диагностические</p>
+            </div>
+            <div class="ttt">
+                <input type="checkbox">
+                <p>Учебные</p>
+            </div>
+            <input type="submit" value="Применить">
+        </div> 
+          <h1>Рекомендованные вам тестики</h1>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+    <div class="yyy">
+  
+             <figure class="tik" style="background-color: #45C1C1;">
+                <a href="Group 6.png"><img src="Group 6.png"></a>
+                <figcaption>Тестик: Какая ты тыква?</figcaption>  
+            </figure>
+
+        <figure class="tik" style="background-color: #EEACB8;">
+           <a href="усталость.png"><img src="усталость.png"></a> 
+            <figcaption>Хроническая усталость, признаки</figcaption>  
+        </figure>
+        <figure class="tik" style="background-color: #5FE1B1 ;" >
+            <a href="лед.png"><img src="лед.png"></a>
+            <figcaption>Блиц опрос:Ледовое побоище</figcaption>  
+        </figure>
+    </div>
+    <div class="yyy">
+  
+        <figure class="tik" style="background-color: #2A7A53;">
+           <a href="111.png"><img src="111.png"></a>
+           <figcaption>✨ Какой у тебя подсознательный архетип?</figcaption>  
+       </figure>
+
+   <figure class="tik" style="background-color: #EC6D96;">
+       <a href="222.png"><img src="222.png"></a>
+       <figcaption>👃🏻 Какой ты запах?</figcaption>  
+   </figure>
+   <figure class="tik" style="background-color: #AAE1AA ;" >
+       <a href="333.png"><img src="333.png"></a>
+       <figcaption>🤰🏼 Тест на беременность</figcaption>  
+   </figure>
+</div>
+</body>
+</html>
